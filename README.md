@@ -1,25 +1,11 @@
 # OVOSSkill
 
-Introductory Skill so that Skill Authors can see how an OVOS Skill is put together
+Template for an OVOS PHAL plugin.
 
-## About
-
-Information about your skill
-
-## Examples
-
-- "Hello world"
-- "How are you?"
-- "Thank you"
+```python
+self.bus.on("mycroft.ready", self.on_mycroft_ready)
+```
 
 ## Credits
 
 authorName (@githubUsername)
-
-## Category
-
-TODO:
-
-## Tags
-
-ovos skill

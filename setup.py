@@ -4,14 +4,14 @@ from os import walk, path
 
 BASEDIR = path.abspath(path.dirname(__file__))
 URL = "TODO: Add 'repositoryUrl' to .projenrc.json and run pj"
-SKILL_CLAZZ = "TODO: Add 'skillClass' to .projenrc.json and run pj"  # needs to match __init__.py class name
+plugin_CLAZZ = "TODO: Add 'skillClass' to .projenrc.json and run pj"  # needs to match __init__.py class name
 PYPI_NAME = "skill-save-conversations"  # pip install PYPI_NAME
 
-# below derived from github url to ensure standard skill_id
-SKILL_AUTHOR, SKILL_NAME = URL.split(".com/")[-1].split("/")
-SKILL_PKG = SKILL_NAME.lower().replace("-", "_")
-PLUGIN_ENTRY_POINT = f"{SKILL_NAME.lower()}.{SKILL_AUTHOR.lower()}={SKILL_PKG}:{SKILL_CLAZZ}"
-# skill_id=package_name:SkillClass
+# below derived from github url to ensure standard plugin_id
+plugin_AUTHOR, plugin_NAME = URL.split(".com/")[-1].split("/")
+plugin_PKG = plugin_NAME.lower().replace("-", "_")
+PLUGIN_ENTRY_POINT = f"{plugin_NAME.lower()}.{plugin_AUTHOR.lower()}={plugin_PKG}:{plugin_CLAZZ}"
+# plugin_id=package_name:pluginClass
 BASE_PATH = BASE_PATH = path.abspath(path.join(path.dirname(__file__), "src"))
 
 
@@ -71,11 +71,11 @@ setup(
     author="TODO: Add 'author' to .projenrc.json and run pj",
     author_email="TODO: Add 'authorAddress' to .projenrc.json and run pj",
     license="# TODO: Add 'license' to .projenrc.json and run pj",
-    package_dir={SKILL_PKG: ""},
-    package_data={SKILL_PKG: find_resource_files()},
-    packages=[SKILL_PKG],
+    package_dir={plugin_PKG: "src"},
+    package_data={plugin_PKG: find_resource_files()},
+    packages=[plugin_PKG],
     include_package_data=True,
     install_requires=get_requirements("requirements.txt"),
-    keywords="ovos skill voice assistant",
-    entry_points={"ovos.plugin.skill": PLUGIN_ENTRY_POINT},
+    keywords="ovos plugin voice assistant",
+    entry_points={"ovos.plugin.phal": PLUGIN_ENTRY_POINT},
 )
