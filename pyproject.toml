@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phal-plugin-save-conversations"
+version = "0.1.0"
+description = "A PHAL plugin that saves conversations to a file"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { "text" = "Apache-2.0" }
+authors = [{ name = "Mike Gray", email = "mike@oscillatelabs.net" }]
+keywords = ["ovos", "neon", "phal", "plugin", "voice assistant"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "ovos-bus-client",
+    "ovos-plugin-manager",
+    "ovos-utils",
+    "orjson",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0.0", "pytest-cov>=4.0.0", "pytest-asyncio>=0.21.0"]
+dev = ["ruff>=0.0.291", "mypy>=1.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/OscillateLabsLLC/phal-plugin-save-conversations"
+Repository = "https://github.com/OscillateLabsLLC/phal-plugin-save-conversations.git"
+Issues = "https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/issues"
+
+[project.entry-points."ovos.plugin.phal"]
+"save_conversations.oscillatelabsllc" = "phal_plugin_save_conversations:SaveConversationsPlugin"
+
+[tool.setuptools.packages.find]
+include = ["phal_plugin_save_conversations*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=phal_plugin_save_conversations --cov-report=term-missing"
+testpaths = ["test"]
+
+[tool.ruff]
+line-length = 119
+target-version = "py311"
+select = [
+    "E", # pycodestyle
+    "F", # pyflakes
+    "I", # isort
+]
+ignore = []
+
+[tool.ruff.isort]
+lines-after-imports = 2
+combine-as-imports = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
