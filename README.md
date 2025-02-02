@@ -18,9 +18,7 @@ OVOS `~/.config/mycroft/mycroft.conf`
 {
   "PHAL": {
     "phal-plugin-save-conversations": {
-      "save_path": {
-        "path": "~/.cache/transcripts"
-      }
+      "save_path": "/home/ovos/.cache/transcripts"
     }
   }
 }
@@ -31,8 +29,7 @@ Neon `~/.config/neon/neon.yaml`
 ```yaml
 PHAL:
   phal-plugin-save-conversations:
-    save_path:
-      path: "~/.cache/transcripts"
+    save_path: "/home/neon/.cache/transcripts"
 ```
 
 ## Credits

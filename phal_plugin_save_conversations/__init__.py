@@ -14,6 +14,7 @@ class MessageLogger:
     """Logs Message objects to JSONL files with timestamps."""
 
     def __init__(self, log_dir: str):
+        LOG.debug("Initializing MessageLogger with log_dir=%s", log_dir)
         self.log_dir = Path(log_dir)
         self.log_dir.mkdir(parents=True, exist_ok=True)
         self.current_file = None
@@ -58,8 +59,8 @@ class MessageLogger:
 class SaveConversationsPlugin(PHALPlugin):
     """A PHAL plugin that saves conversations to a file."""
 
-    def __init__(self, *args, bus=None, **kwargs):
-        super().__init__(*args, bus=bus, **kwargs)
+    def __init__(self, *args, bus=None, name="phal-plugin-save-conversations", **kwargs):
+        super().__init__(*args, bus=bus, name=name, **kwargs)
         self.bus.on("recognizer_loop:wakeword", self.record_message)
         self.bus.on("recognizer_loop:utterance", self.record_message)
         self.bus.on("speak", self.record_message)
