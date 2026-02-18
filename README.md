@@ -1,5 +1,7 @@
 # SaveConversationsPlugin
 
+[![Status: Active](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/OscillateLabsLLC/.github/blob/main/SUPPORT_STATUS.md)
+
 An OVOS/Neon PHAL plugin that saves a transcript of your conversations in JSONL format.
 
 These transcripts can be used to review your conversations, look for patterns, find opportunities to write new skills, or for any other purpose.
