@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.3](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/compare/v0.2.2...v0.2.3) (2026-09-05)
+
+
+### Bug Fixes
+
+* **deps:** bump urllib3, orjson, requests, filelock, pytest, pygments ([044f2ab](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/commit/044f2ab6dd53ff706944daf07cccfef90bd6c15e))
+* **deps:** bump urllib3, orjson, requests, filelock, pytest, pygments ([5bf2322](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/commit/5bf23227ecce5fc39727b721a30740c4e67a97b9))
+
 ## [0.2.2](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/compare/v0.2.1...v0.2.2) (2026-08-19)
 
 
