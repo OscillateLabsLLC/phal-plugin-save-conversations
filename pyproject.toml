@@ -10,7 +10,7 @@ name = "phal-plugin-save-conversations"
 version = "0.2.3"
 description = "A PHAL plugin that saves conversations to a file"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { "text" = "Apache-2.0" }
 authors = [{ name = "Mike Gray", email = "mike@oscillatelabs.net" }]
 keywords = ["ovos", "neon", "phal", "plugin", "voice assistant"]
