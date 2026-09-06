@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.4](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/compare/v0.2.3...v0.2.4) (2026-09-06)
+
+
+### Bug Fixes
+
+* **deps:** raise Python floor to 3.10 and relock to clear Dependabot alerts ([8e3f66b](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/commit/8e3f66b3f1d91df0ad314b0e5865a585622505f9))
+* **deps:** raise Python floor to 3.10 and relock to clear Dependabot alerts ([f10ede1](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/commit/f10ede1b669d8930229f0e8502055f7c7d3f08b6))
+
 ## [0.2.3](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/compare/v0.2.2...v0.2.3) (2026-09-05)
 
 
