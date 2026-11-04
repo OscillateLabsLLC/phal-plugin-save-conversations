@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.5](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/compare/v0.2.4...v0.2.5) (2026-11-04)
+
+
+### Bug Fixes
+
+* **deps:** bump certifi, urllib3 ([653895b](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/commit/653895b2e4455bb050be56abc4341da4f58a5b7a))
+* **deps:** bump certifi, urllib3 ([ff6cb1e](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/commit/ff6cb1eb57b71269a09929390707a5b556c3d757))
+
 ## [0.2.4](https://github.com/OscillateLabsLLC/phal-plugin-save-conversations/compare/v0.2.3...v0.2.4) (2026-09-06)
 
 
